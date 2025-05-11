@@ -1,0 +1,237 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(160deg, #30527a, #334b7c);
+    color: rgb(226, 213, 213);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.slogan {
+    font-style: italic;
+}
+
+/* Navegación */
+nav {
+    background-color: #070707;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: rgb(215, 200, 200);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #edebe2;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/prin.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 7, 7, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgb(25, 52, 233);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background-color: #ff7e5f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffe259;
+    transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde de WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.container {
+    width: 85%;
+    margin: 2rem auto;
+}
+
+/* Productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.producto {
+    background-color: rgb(251, 251, 251);
+    border-radius: 8px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 1.5rem;
+}
+
+.producto h3 {
+    margin-bottom: 0.5rem;
+    color: #00000049;
+}
+
+.precio {
+    font-weight: bold;
+    color: #ff7e5f;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Secciones */
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4b6cb7;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ff7e5f;
+    margin: 0.5rem auto;
+}
+
+/* Footer */
+footer {
+    background-color: #182848;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.redes-sociales {
+    margin: 1rem 0;
+}
+
+.redes-sociales a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
